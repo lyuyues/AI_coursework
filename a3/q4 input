@@ -1,0 +1,25 @@
+assign(report_stderr, 2).
+set(ignore_option_dependencies). % GUI handles dependencies
+
+if(Prover9). % Options for Prover9
+  assign(max_seconds, 60).
+end_if.
+
+if(Mace4).   % Options for Mace4
+  assign(max_seconds, 60).
+end_if.
+
+formulas(assumptions).
+
+exists x (person(x) & mg(x) & wl(x)).
+all x (person(x) & ar(x) -> old(x)).
+all x (person(x) & wl(x) -> ar(x)).
+
+end_of_list.
+
+formulas(goals).
+
+exists m (person(m) & mg(m) & old(m)).
+
+end_of_list.
+

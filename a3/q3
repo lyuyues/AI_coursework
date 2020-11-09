@@ -1,0 +1,30 @@
+============================== prooftrans ============================
+Prover9 (32) version Dec-2007, Dec 2007.
+Process 74192 was started by theresa_l on tests-MBP.mkingzhu.xyz,
+Thu Nov 14 20:21:51 2019
+The command was "/private/var/folders/_m/9yrg598s1bj594x7mvl0t33h0000gp/T/AppTranslocation/5DB5F923-5637-4933-96E5-FD793688822C/d/Prover9-Mace4-v05B.app/Contents/Resources/bin-mac-intel/prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.00 (+ 0.00) seconds.
+% Length of proof is 10.
+% Level of proof is 4.
+% Maximum clause weight is 0.
+% Given clauses 0.
+
+2 (all x -(bird(x) & large(x) -> liveonhon(x))) # label(non_clause).  [assumption].
+3 (all x (bird(x) & -liveonhon(x) -> dullcolor(x))) # label(non_clause).  [assumption].
+6 (all x -(bird(x) & richcolor(x) -> dullcolor(x))) # label(non_clause).  [assumption].
+11 -bird(x) | liveonhon(x) | dullcolor(x).  [clausify(3)].
+12 bird(x).  [clausify(2)].
+16 liveonhon(x) | dullcolor(x).  [resolve(11,a,12,a)].
+17 -liveonhon(x).  [clausify(2)].
+18 dullcolor(x).  [resolve(16,a,17,a)].
+19 -dullcolor(x).  [clausify(6)].
+20 $F.  [resolve(18,a,19,a)].
+
+============================== end of proof ==========================

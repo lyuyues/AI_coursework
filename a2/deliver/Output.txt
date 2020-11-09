@@ -1,0 +1,39 @@
+Question1:
+Enter your *valid* move> 3
+Human: 
+3
+Coin left:10
+Computer: 
+1
+Coin left:9
+Enter your *valid* move> 3
+Human: 
+3
+Coin left:6
+Computer: 
+1
+Coin left:5
+Enter your *valid* move> 3
+Human: 
+3
+Coin left:2
+Computer: 
+1
+Coin left:1
+Enter your *valid* move> 1
+Human: 
+1
+Coin left:0
+Computer wins!
+
+
+Question 2:
+{Chesterfield=2, English=3, Japanese=5, Kools=1, Lucky-Strike=4, Norwegian=1, Old-Gold=3, Parliament=5, Spaniard=4, Ukrainian=2, blue=2, coffee=5, dog=4, fox=1, green=5, horse=2, ivory=4, milk=3, orange juice=4, red=3, snails=3, tea=2, water=1, yellow=1, zebra=5}
+
+/*
+House 1: Yellow, Water, Norwegian, Fox, Kools
+House 2: BLue, Tea, Ukrainian, Horse, Chesterfield
+House 3: Red, Milk, Englishman, Snails, Old-Gold
+House 4: Ivory, Orange Juice, Spaniard, Dog, Lucky-Strike
+House 5: Green, Coffee, Japanese, Zebra, Parliament
+*/

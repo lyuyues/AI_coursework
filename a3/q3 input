@@ -1,0 +1,27 @@
+% Saved by Prover9-Mace4 Version 0.5B, March 2008 (Dec 2007 LADR).
+
+set(ignore_option_dependencies). % GUI handles dependencies
+
+if(Prover9). % Options for Prover9
+  assign(max_seconds, 60).
+end_if.
+
+if(Mace4).   % Options for Mace4
+  assign(max_seconds, 60).
+end_if.
+
+formulas(assumptions).
+
+all x (hummingbird(x) -> richcolor(x)).
+all y -(bird(y) & large(y) & liveonhon(y)).
+all y (bird(y) & -liveonhon(y) -> -richcolor(y)).
+all x (hummingbird(x) -> bird(x)).
+
+end_of_list.
+
+formulas(goals).
+
+all x (hummingbird(x) -> -large(x)).
+
+end_of_list.
+

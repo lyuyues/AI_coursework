@@ -1,0 +1,37 @@
+============================== prooftrans ============================
+Prover9 (32) version Dec-2007, Dec 2007.
+Process 74984 was started by theresa_l on tests-MBP.mkingzhu.xyz,
+Thu Nov 14 21:53:21 2019
+The command was "/private/var/folders/_m/9yrg598s1bj594x7mvl0t33h0000gp/T/AppTranslocation/5DB5F923-5637-4933-96E5-FD793688822C/d/Prover9-Mace4-v05B.app/Contents/Resources/bin-mac-intel/prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.00 (+ 0.00) seconds.
+% Length of proof is 17.
+% Level of proof is 5.
+% Maximum clause weight is 0.
+% Given clauses 0.
+
+1 (exists x (person(x) & mg(x) & wl(x))) # label(non_clause).  [assumption].
+2 (all x (person(x) & ar(x) -> old(x))) # label(non_clause).  [assumption].
+3 (all x (person(x) & wl(x) -> ar(x))) # label(non_clause).  [assumption].
+4 (exists m (person(m) & mg(m) & old(m))) # label(non_clause) # label(goal).  [goal].
+5 -person(x) | -ar(x) | old(x).  [clausify(2)].
+6 person(c1).  [clausify(1)].
+7 -person(x) | -wl(x) | ar(x).  [clausify(3)].
+8 -person(x) | -mg(x) | -old(x).  [deny(4)].
+9 -mg(c1) | -old(c1).  [resolve(8,a,6,a)].
+10 mg(c1).  [clausify(1)].
+11 -wl(c1) | ar(c1).  [resolve(7,a,6,a)].
+12 wl(c1).  [clausify(1)].
+13 ar(c1).  [resolve(11,a,12,a)].
+14 -ar(c1) | old(c1).  [resolve(5,a,6,a)].
+15 old(c1).  [resolve(13,a,14,a)].
+16 -old(c1).  [resolve(9,a,10,a)].
+17 $F.  [resolve(15,a,16,a)].
+
+============================== end of proof ==========================
